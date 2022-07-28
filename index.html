@@ -44,11 +44,10 @@
             iconSize: [29, 24],
           }));
           marker.bindPopup(
-            '<b>' +
-              station.station_name +
-              '</b>'+
-              '<br>' + station.lat +
-              '<br>' + station.lon
+            '<b>' +station.station_name +'</b>'+
+              '</br> Lat:' + station.lat +
+              '</br> Lon:' + station.lon +
+              '</br> Packets:' + station.packets
           );
           markers.push(marker);
         }
