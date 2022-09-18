@@ -33,7 +33,7 @@
         maxZoom: 18
       }).addTo(map);
       $.getJSON('https://api.ahwest.cf', function (data) {
-        var stations = data.stations;
+        var stations = data.nodes;
         var markers = [];
         for (var i = 0; i < stations.length; i++) {
           var station = stations[i];
@@ -44,7 +44,7 @@
             iconSize: [29, 24],
           }));
           marker.bindPopup(
-            '<b>' +station.station_name +'</b>'+
+            '<b>' +station.node_name +'</b>'+
               '</br> Lat:' + station.lat +
               '</br> Lon:' + station.lon 
           );
