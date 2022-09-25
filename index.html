@@ -32,7 +32,7 @@
       L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
         maxZoom: 18
       }).addTo(map);
-      $.getJSON('https://api.ahwest.cf', function (data) {
+      $.getJSON('https://api.ahwest.cf/node', function (data) {
         var stations = data.nodes;
         var markers = [];
         for (var i = 0; i < stations.length; i++) {
